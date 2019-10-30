@@ -14,7 +14,7 @@ main {
 
 /* ##### Search ##### */
 header {
-	background: #3498db;
+	background: #0021A5;
 	margin-bottom: 2rem;
 }
 
@@ -44,7 +44,7 @@ th {
 td:hover {
 	position: left;
 	cursor: pointer;
-	background-color: #ddd;
+	background-color: #FA4616;
 }
 
 /* ##### Columns ##### */
@@ -52,12 +52,14 @@ td:hover {
 	float: left;
 	width: 50%;
 	padding: 10px;
+	background-color: #0021A5;
+	color: #ddd;
 }
 .column2 {
 	float: left;
 	width: 50%;
 	padding: 20px;
-	background-color: #ccdef9;
+	background-color: #FA4616;
 }
 
 /* ##### Rows ##### */
