@@ -15,6 +15,12 @@ class App extends React.Component {
     };
   }
 
+  componentWillMount(){
+    this.setState({
+      ...this.state,
+      data: this.props.data
+    })
+  }
   filterUpdate(value) {
     this.setState({
       filterText: value
@@ -25,6 +31,21 @@ class App extends React.Component {
     this.setState({
       selectedBuilding: id
     })
+  }
+
+  AddBldngfunction(address1, code1, name1, id1) {
+    let building = {
+      code: code1,
+      name: name1,
+      address: address1,
+      id: id1+1
+    }
+    
+      this.setState({
+        ...this.state,
+        data: this.state.data.concat([building])
+      })
+    
   }
 
   render() {
@@ -47,7 +68,7 @@ class App extends React.Component {
                 <table className="table table-striped table-hover">
                   <tr>
                     <td>
-                       <b>Code Building</b> {/*flexbox*/}
+                      <b>Code Building</b> {/*flexbox*/}
                     </td>
                   </tr>
                   <BuildingList
@@ -64,10 +85,11 @@ class App extends React.Component {
                 selectedBuilding={this.state.selectedBuilding}
               />
               <AddBuilding
-                data={this.props.data}
+                AddBldngfunction={this.AddBldngfunction}
               />
               <RemoveBuilding
                 data={this.props.data}
+                
               />
             </div>
           </div>
