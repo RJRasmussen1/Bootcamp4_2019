@@ -9,12 +9,7 @@ class AddBldng extends React.Component {
 	}
 	
     enterHandler = (event) => {
-    let name = this.state.name;
-    let code = this.state.code;
-	let address = this.state.address;
-    let data = this.props.data;
-    let id = data.length;
-	this.props.AddBldngfunction(name, code, address, id)
+	this.props.AddBldngfunction( this.state.name,  this.state.code,  this.state.address,  this.state.id)
 	}
     
 
