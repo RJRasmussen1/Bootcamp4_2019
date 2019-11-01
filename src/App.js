@@ -10,6 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      data:[],
       filterText: '',
       selectedBuilding: 0
     };
@@ -38,7 +39,7 @@ class App extends React.Component {
       code: code1,
       name: name1,
       address: address1,
-      id: id1+1
+      id: id1
     }
     
       this.setState({
